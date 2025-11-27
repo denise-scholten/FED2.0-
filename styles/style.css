@@ -1,0 +1,436 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+
+/**************/
+/* fonds */
+/**************/
+
+p{
+	font-family: omnes-pro, sans-serif;
+    font-size: 1rem;
+    /* font-weight: 500; */
+    line-height: 1.4;
+}
+
+h2{
+    font-family: brandon-grotesque, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 900;
+    letter-spacing: 1.3px;
+    line-height: 1.15;
+    margin: 0 0 0.9rem;
+    text-transform: uppercase;
+}
+
+a{
+    font-family: brandon-grotesque, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 1000;
+    letter-spacing: 1.3px;
+    line-height: 1.15;
+    margin: 0 0 0.9rem;
+    text-transform: uppercase;
+}
+
+h3{
+	color: #333F48;
+    font-family: brandon-grotesque, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+}
+
+/**************/
+/* einde fonds */
+/**************/
+
+li{
+	list-style-type: none;
+	text-decoration-line: none;
+}
+
+body{
+	margin: 0em;
+	background-color: #FCFCFC;
+}
+
+header{
+	display: flex;
+	flex-direction: row;
+	justify-content:space-between;
+	align-items: center;
+	padding-top: 1em;
+	margin-left: 1em;
+	margin-right: 1em;
+	min-height: 60px;
+}
+
+
+header img, footer img{
+	height: 3.8em;
+	width: 8.5em;
+}
+
+ /* nav.open{
+	height: 100vh;
+}
+
+ nav{
+	background-color: red;
+	position: fixed;
+	left: 0;
+	width: 100%;
+	top:6rem;
+} 
+
+nav li{
+	list-style-type: none;
+	text-decoration-line: none;
+	display: flex;
+} */
+
+
+/***************/
+/* Introductie */
+/***************/
+
+.intro{
+	margin:1.5em;
+	margin-top: 0em;
+	background-color: white;
+	box-shadow: 0 5px 20px rgba(75, 75, 75, 0.08);
+}
+
+.intro p{
+	padding: 1.2em;
+	margin-top: 0em;
+}
+
+/*********/
+/* Video */
+/*********/
+
+.introVideo {
+position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;   /* maakt de container perfect vierkant */
+  overflow: hidden; /* crop */
+}
+
+.introVideo video{
+   position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: 0;  /* onder de tekst */
+
+}
+
+.videoContent {
+  position: absolute;
+  bottom: 10%;          /* net zoals op Liefmans */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;           /* boven video */
+  text-align: center;
+  color: white;
+  width: 90%;
+}
+
+.videoContent h1{
+	color: #fff;
+    display: block;
+    font-family: brandon-grotesque, sans-serif;
+    font-size: 2.25rem;
+    font-weight: 900;
+    letter-spacing: 2.89px;
+    line-height: 1;
+    text-transform: uppercase;
+	text-align: left;
+	margin-bottom: 0em;
+}
+
+.videoContent h2{
+	color: #fff;
+    display: block;
+    font-family: flood-std, sans-serif;
+    font-size: 2.25rem;
+    font-weight: 400;
+    letter-spacing: -2px;
+    line-height: 1;
+	text-align: left;
+}
+/***************/
+/* einde Video */
+/***************/
+
+/* buttons */
+
+.intro a, .flesjes a, .aporoBlok a{
+	background-color:#D2060D;
+	text-decoration: none;
+	color: white;
+	padding: 0.75rem 1.1rem 0.75rem 2.2rem;
+	border-radius: 0.5em;
+	width: 11em;
+} 
+
+/* buttons */
+
+
+.intro a{
+	box-shadow: 0 7px 20px 0 rgba(97, 0, 3, 0.28);
+	margin-left: 1.5em;
+}
+
+/*********************/
+/* einde introductie */
+/*********************/
+
+.glas {
+	display: flex;
+	flex-direction: row;
+	justify-content: end;
+	margin-right: 1em;
+	margin-top: 4em;
+ } 
+
+.glas img:first-of-type{
+	width: 10em;
+	height: 13.5em;
+}
+.glas img:last-of-type{
+	width: 5em;
+	height: 5em;
+	margin-top: 4em;
+	margin-left: 0.4em;
+}
+
+.alleFlesjes{
+	padding: 0.8em;
+	background-image: linear-gradient(#F4F4F4 0px, rgba(252, 252, 252, 0) 200px);
+}
+
+.fles{
+	width: 7.5em;
+	height: 27em;
+}
+
+.flesjes{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 15px;
+}
+
+section.flesjes:nth-of-type(even) img{
+  order: -1;
+}
+
+.flesje1 h2{
+	color: #D2060D;
+}
+
+.flesje1 a{
+	background:  #D2060D;
+    box-shadow: 0 7px 20px 0 rgba(97, 0, 3, 0.28);
+}
+
+.flesje1 a::before {
+  content: "›"; /* of Unicode '\203A' */
+  font-size: 2rem;
+}
+
+.flesje2 h2{
+	color: #168FC3;
+}
+
+.flesje2 a{
+	background-color:#168FC3;
+	box-shadow: 0 7px 20px 0 rgba(22, 143, 195, 0.13);
+}
+
+.flesje3 h2, .flesje4 h2{
+	color:#FFA776;
+}
+
+.flesje3 a, .flesje4 a{
+	background: #FFA776; 
+	box-shadow: 0 7px 20px 0 rgba(255, 167, 118, 0.13);
+}
+
+.flesjes p{
+	color: #333F48;
+    font-family: omnes-pro, sans-serif;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -0.1px;
+    line-height: 1.4;
+    margin-top: 0em;
+}
+
+
+
+.flesjes img[alt="flesje-fruitesse"], img[alt="flesje-peach"]{
+	transform: rotate(6deg);
+}
+
+img[alt="flesje-fruitesse0.0"], img[alt="flesje-peach0.0"]{
+	transform: rotate(-6deg);
+}
+
+.OnTheRocks{
+	display: flex;
+	flex-direction: column;
+	padding-left: 1em;
+}
+
+.OnTheRocks h3{
+ 	order: -1;
+}
+
+
+/*********************/
+/* aporo o'clock*/
+/*********************/
+
+.aporoHeading{
+	margin-top: 10em;
+	text-align: center;
+	color: #333F48;
+}
+
+.aporo{
+	padding: 1em;
+	padding-bottom: 0em;
+}
+
+.aporo img,.cocktailCarousel li img, .instaCarousel li img{
+	width: 100%;
+
+} 
+
+.aporo a{
+	position: relative;
+	top: 2em;
+	left: -1em;
+    box-shadow: 0 7px 20px 0 rgba(97, 0, 3, 0.28);
+	margin-left: 1.5em;
+}
+	
+.aporoBlok{
+	position: relative;
+	top: -4em;
+	margin: 0em 0.8em 0em 0.8em;
+	padding: 1.2em;
+	background-color: white;
+	box-shadow: 0 5px 20px rgba(75, 75, 75, 0.08);
+	border-radius: 0.2em;
+}
+
+.aporoBlok h2{
+	color: #D2060D;
+}
+.cocktailCarousel{
+	margin-left: 1em;
+}
+
+.cocktailCarousel h3{
+	color: #D2060D;
+	font-family: brandon-grotesque, sans-serif;
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 1.3;
+    margin: 0 0 5px;
+    text-transform: uppercase;
+
+	display: flex;
+	order: -1;
+}
+
+
+.cocktailCarousel h2{
+	color: #333E45;
+    font-family: flood-std, sans-serif;
+    font-size: 2.25rem;
+    font-weight: 400;
+    letter-spacing: -2px;
+    line-height: 1;
+}
+	
+
+/**********/
+/* footer */
+/**********/
+
+footer{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+}
+
+footer a{
+	text-decoration: none;
+	color: #D2060D;
+	border-radius: 0.5em;
+    font-family: "brandon-grotesque", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+    font-size: 0.8125rem;
+    letter-spacing: 1.42px;
+    line-height: 2.5;
+    text-transform: uppercase;
+}
+
+footer h2{
+	color: #333F48;
+    font-family: "brandon-grotesque", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+    font-size: 0.8125rem;
+    letter-spacing: 1px;
+    line-height: 1.35;
+    text-transform: uppercase;
+	padding-top: 1em;
+}
+
+ footer section{
+	border-top: solid;
+	border-color: #E7E7E7;;
+	width: 95%;
+	margin-top: 1em;
+ }
+
+ footer ul{
+	padding-left: 0em;
+ }
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	/* startje */
+	--color-text:#111;
+	--color-background:#eee;
+}
+
+
+/****************/
+/* JOUW STYLING */
+/****************/
+
+/* jouw code */
+
