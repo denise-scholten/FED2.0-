@@ -13,7 +13,6 @@
 p{
 	font-family: omnes-pro, sans-serif;
     font-size: 1rem;
-    /* font-weight: 500; */
     line-height: 1.4;
 }
 
@@ -62,39 +61,59 @@ body{
 }
 
 header{
+	width: 100%;
+	z-index: 999;
+}
+
+header.open {
+    position: fixed;
+}
+
+header div{
+	position: absolute;
+	z-index: 20;
 	display: flex;
 	flex-direction: row;
 	justify-content:space-between;
 	align-items: center;
-	padding-top: 1em;
-	margin-left: 1em;
+	padding: 1em;
 	margin-right: 1em;
 	min-height: 60px;
+	width: 100%;
+	background-color: #FCFCFC;
 }
-
 
 header img, footer img{
 	height: 3.8em;
 	width: 8.5em;
 }
 
- /* nav.open{
-	height: 100vh;
+nav {
+	background-color: #D2060D;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 103vh; 
+    z-index: 10;
+    padding: 2rem;
+    overflow-y: auto; 
+    transform: translateY(-100%);
+    transition: transform 0.4s ease-in-out;
+	margin-top: 10vh;
 }
 
- nav{
-	background-color: red;
-	position: fixed;
-	left: 0;
-	width: 100%;
-	top:6rem;
-} 
+header.open nav {
+    transform: translateY(0);
+}
 
 nav li{
 	list-style-type: none;
 	text-decoration-line: none;
 	display: flex;
-} */
+	z-index: 10;
+	color: white;
+}  
 
 
 /***************/
@@ -120,28 +139,28 @@ nav li{
 .introVideo {
 position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1;   /* maakt de container perfect vierkant */
-  overflow: hidden; /* crop */
+  aspect-ratio: 1 / 1; 
+  overflow: hidden; 
 }
 
 .introVideo video{
-   position: absolute;
+	position: absolute;
   top: 50%;
   left: 50%;
   width: 100%;
   height: 100%;
   object-fit: cover;
   transform: translate(-50%, -50%);
-  z-index: 0;  /* onder de tekst */
-
+  z-index: 0;  
+  margin: 0.5em;
 }
 
 .videoContent {
   position: absolute;
-  bottom: 10%;          /* net zoals op Liefmans */
+  bottom: 10%;        
   left: 50%;
   transform: translateX(-50%);
-  z-index: 2;           /* boven video */
+  z-index: 2;          
   text-align: center;
   color: white;
   width: 90%;
@@ -180,10 +199,22 @@ position: relative;
 	background-color:#D2060D;
 	text-decoration: none;
 	color: white;
-	padding: 0.75rem 1.1rem 0.75rem 2.2rem;
+	padding: 1em;
 	border-radius: 0.5em;
 	width: 11em;
 } 
+
+
+.intro a::before, .flesjes a::before, .aporoBlok a::before{
+	content: "";
+    display: inline-block;
+    width: 1em;    
+    height: 1em;
+	margin-right: 0.5em;
+    background-image: url("../images/pijl.svg");
+    background-size: contain; 
+    background-repeat: no-repeat;
+}
 
 /* buttons */
 
@@ -216,6 +247,10 @@ position: relative;
 	margin-left: 0.4em;
 }
 
+/***********/
+/* flesjes */
+/***********/
+
 .alleFlesjes{
 	padding: 0.8em;
 	background-image: linear-gradient(#F4F4F4 0px, rgba(252, 252, 252, 0) 200px);
@@ -227,6 +262,7 @@ position: relative;
 }
 
 .flesjes{
+	overflow: hidden;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -246,10 +282,6 @@ section.flesjes:nth-of-type(even) img{
     box-shadow: 0 7px 20px 0 rgba(97, 0, 3, 0.28);
 }
 
-.flesje1 a::before {
-  content: "›"; /* of Unicode '\203A' */
-  font-size: 2rem;
-}
 
 .flesje2 h2{
 	color: #168FC3;
@@ -280,8 +312,6 @@ section.flesjes:nth-of-type(even) img{
     margin-top: 0em;
 }
 
-
-
 .flesjes img[alt="flesje-fruitesse"], img[alt="flesje-peach"]{
 	transform: rotate(6deg);
 }
@@ -299,7 +329,6 @@ img[alt="flesje-fruitesse0.0"], img[alt="flesje-peach0.0"]{
 .OnTheRocks h3{
  	order: -1;
 }
-
 
 /*********************/
 /* aporo o'clock*/
@@ -342,6 +371,15 @@ img[alt="flesje-fruitesse0.0"], img[alt="flesje-peach0.0"]{
 .aporoBlok h2{
 	color: #D2060D;
 }
+
+/************************/
+/* cocktails & carousels*/
+/************************/
+
+.cocktailCarousel button{
+	border-radius: 100%;
+}
+
 .cocktailCarousel{
 	margin-left: 1em;
 }
@@ -355,11 +393,9 @@ img[alt="flesje-fruitesse0.0"], img[alt="flesje-peach0.0"]{
     line-height: 1.3;
     margin: 0 0 5px;
     text-transform: uppercase;
-
 	display: flex;
 	order: -1;
 }
-
 
 .cocktailCarousel h2{
 	color: #333E45;
@@ -370,6 +406,21 @@ img[alt="flesje-fruitesse0.0"], img[alt="flesje-peach0.0"]{
     line-height: 1;
 }
 	
+.cocktailCarousel ul{
+	display: flex;
+	height: auto;
+	width: 100%;
+	gap: 1em;
+	padding-left: 0em;
+  	overflow-x: scroll;
+  	scroll-snap-type: x mandatory;
+}
+
+.cocktailCarousel li{
+
+	flex: 0 0 80%;
+  	scroll-snap-align: center;
+}
 
 /**********/
 /* footer */
