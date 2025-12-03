@@ -30,10 +30,24 @@ const menuButton = document.querySelector("header div > button");
 const closeButton = document.querySelector("nav > button");
 const header = document.querySelector("header");
 
+
 menuButton.addEventListener("click", () => {
     header.classList.toggle("open");
+    
+    if (header.classList.contains("open")) {
+        menuButton.textContent = "Sluiten";
+        body.classList.add("menu-open");
+    } else {
+        menuButton.textContent = "Menu";
+        body.classList.remove("menu-open");
+    }
 });
 
+// closeButton hoeft nu alleen de classes te verwijderen
 closeButton.addEventListener("click", () => {
     header.classList.remove("open");
+    body.classList.remove("menu-open");
+    menuButton.textContent = "Menu"; // Zet tekst terug
 });
+
+
