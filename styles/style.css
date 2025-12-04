@@ -16,6 +16,19 @@ p{
     line-height: 1.4;
 }
 
+h1{
+	color: var(--color-text);
+    font-family: brandon-grotesque, sans-serif;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 900;
+    letter-spacing: 2px;
+    line-height: 1;
+    margin: 0 auto;
+    max-width: 690px;
+    text-transform: uppercase;
+}
+
 h2{
     font-family: brandon-grotesque, sans-serif;
     font-size: 1.25rem;
@@ -65,6 +78,30 @@ header{
 	z-index: 999;
 }
 
+header button{
+	background: none;
+	border: none;
+	color: #D2060D;
+	 font-family: brandon-grotesque, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 1000;
+    letter-spacing: 1.3px;
+    line-height: 1.15;
+    margin: 0 0 0.9rem;
+    text-transform: uppercase;
+}
+
+header p{
+	color: #111;
+	 font-family: brandon-grotesque, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 1000;
+    letter-spacing: 1.3px;
+    line-height: 1.15;
+    margin: 0 0 0.9rem;
+    text-transform: uppercase;
+}
+
 header.open {
     position: fixed;
 }
@@ -75,7 +112,7 @@ header div{
 	display: flex;
 	flex-direction: row;
 	justify-content:space-between;
-	align-items: center;
+	align-items: flex-end;
 	padding: 1em;
 	margin-right: 1em;
 	min-height: 60px;
@@ -565,7 +602,6 @@ img[alt="flesje-fruitesse0.0"], img[alt="flesje-peach0.0"]{
 	margin-right: 0.5em;
 	position: relative;
     border-radius: 50%;
-    /*transition: background-color 140ms ease-in-out; */
     background-color: #bebebe;
 }
 
@@ -647,12 +683,88 @@ footer h2{
 	padding-left: 0em;
  }
 
+/****************/
+/* tweede pagina*/
+/****************/
+
+/* .onTheRocksDetail{
+	margin-top: 5em;
+} */
+
+.liefmansGlas{
+	width: 9em;
+	height: 13.5em;
+	z-index: 4;
+	position: relative;
+	left: 12%;
+}
+
+.fruitesseFlesje{
+	width: 6.5em;
+	height: 24em;
+	position: relative;
+	left: 8%;
+}
+
+.blijeMensen{
+	width: 100%;
+	height: auto;
+}
+
+.onTheRocksDetail{
+	margin: 1em;
+	padding-top: 10em;
+}
+
+.onTheRocksDetail div{
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	position: relative;
+}
+
+.onTheRocksDetail h1{
+	margin-top: 1em;
+}
+
+.onTheRocksDetail p::before{
+	background-image: url("../images/border_lijn.svg");
+
+}
+
+.serveren{
+	padding-left: 0em;
+}
+.serveren img{
+	width: 100%;
+	height: auto;
+	padding-left: 1em;
+	padding-right: 1em; 
+}
+.inschenken{
+	margin: 1em;
+}
+.inschenken h2{
+	color: #333E45;
+    font-family: flood-std, sans-serif;
+    font-size: 2.25rem;
+    font-weight: 400;
+    letter-spacing: -2px;
+    line-height: 1;
+}
+
+.inschenken h3{
+	color: #D2060D;
+	
+}
+
+
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
 	/* startje */
-	--color-text:#111;
+	--color-text:#D2060D;
 	--color-background:#eee;
 }
 
