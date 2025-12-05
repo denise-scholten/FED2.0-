@@ -8,7 +8,7 @@
 	<title>Liefmans</title>
 
 	<link href="styles/style.css" rel="stylesheet">
-	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+	<link rel="icon" type="image/svg+xml" href="images/favicon-32x32.png">
 
 	<link rel="stylesheet" href="https://use.typekit.net/iui8krl.css">
 	<link rel="stylesheet" href="https://use.typekit.net/njl6cxy.css">
@@ -18,15 +18,27 @@
 <body>
 
 	<header>
-		<div>
-			<p> NL</p>
-			<img src="images/logo.png" alt="logo liefmans">
-			<button> Menu </button>  <!--change text into in java naar sluiten ipv menu-->
-		</div>
-		<nav>
+		<div class="navigatie">
+			<div class="language-switcher">
+    			<button class="language-button" aria-expanded="false" aria-controls="language-list">NL
+					<svg xmlns="http://www.w3.org/2000/svg" height="7" width="10" viewBox="0 0 10 7">
+						<path d="M8.222.222l1.556 1.556L5 6.556.222 1.778 1.778.222 5 3.445z" fill="currentColor" fill-rule="nonzero"></path>
+					</svg>
+				</button>
+    			<ul id="language-list" hidden>
+        			<li><a href="#">België</a></li>
+        			<li><a href="#">France</a></li>
+        			<li><a href="#">International</a></li>
+    			</ul>
+			</div>
 
+			<img src="images/logo.svg" alt="logo liefmans">
+			<button class="menu-button"> Menu </button>  
+		</div>
+
+		<nav>
 			<ul>
-				<li> <a href="On_the_rocks.html" > on the rocks </a></li>
+				<li> <a href="On_the_rocks.html" > on the rocks </a></li> <!--  active -->
 				<li> <a href="#" > on the rocks 0.0 </a></li>
 				<li> <a href="#" > on the rocks peach</a></li>
 				<li> <a href="#" > new on the rocks peach 0.0 </a></li>
@@ -35,9 +47,12 @@
 				<li> <a href="#" > contact </a></li>
 			</ul>
 		</nav>
-	</header>
+	</header> 
 
 <!-- heading toevoegen-->
+ <!-- p en de button een mx with geven 
+ 		header div top 0 
+		streeptjes maken met span kijk ook ff naar de code -->
 	<main>
 
 		<section class="introVideo">
@@ -76,7 +91,7 @@
 					</p>
 					<a href="#"> Meer info</a>
 				</div>
-				<img src="images/flesje-fruitesse.webp" class="fles" alt="flesje-fruitesse">
+				<img src="images/flesje-fruitesse.webp" class="fles1" alt="flesje-fruitesse">
 			</section>
 
 			<section class="flesjes">
@@ -89,7 +104,7 @@
 					</p>
 					<a href="#"> Meer info</a>
 				</div>
-				<img src="images/flesje-nul.webp" class="fles" alt="flesje-fruitesse0.0">
+				<img src="images/flesje-nul.webp" class="fles2" alt="flesje-fruitesse0.0">
 			</section>
 
 			<section class="flesjes">
@@ -102,7 +117,7 @@
 					</p>
 					<a href="#"> Meer info</a>
 				</div>
-				<img src="images/flesje-peach.webp" class="fles" alt="flesje-peach">
+				<img src="images/flesje-peach.webp" class="fles3" alt="flesje-peach">
 			</section>
 
 			<section class="flesjes">
@@ -116,7 +131,7 @@
 					</p>
 					<a href="#"> Meer info</a>
 				</div>
-				<img src="images/flesje-peach-nul" class="fles" alt="flesje-peach0.0">
+				<img src="images/flesje-peach-nul.webp" class="fles4" alt="flesje-peach0.0">
 			</section>
 		</div>
  <!-- heading  aporo o'clock!--> 
@@ -165,8 +180,9 @@
 			   n een verfrissende cocktail.
 			</p>
 			<div class="cocktailButtons">
-				<button type="button" aria-label="vorige" class="vorige" url viewBox="0 0 24 24"></button>
-				<button type="button" aria-label="volgende" class="volgende" url viewBox="0 0 24 24"></button>
+				<button id="cocktail-prev" class="vorige" aria-label="vorige" url viewBox="0 0 24 24"></button>
+				<button id="cocktail-next" class="volgende" aria-label="volgende" url viewBox="0 0 24 24"></button>
+
 			</div>
 			<!-- alt ff uitbreiden-->
 			<ul>
@@ -205,14 +221,14 @@
 				<li> <img src="images/carousel6.webp"> </li>
 			</ul>
 			<div class="instaKnoppen">
-			<button type="button" aria-label="vorige" class="vorige2" url viewBox="0 0 24 24"></button>
-			<button type="button" aria-label="volgende" class="volgende2" url viewBox="0 0 24 24"></button>
+				<button id="insta-prev" class="vorige2" aria-label="vorige" url viewBox="0 0 24 24"></button>
+				<button id="insta-next" class="volgende2" aria-label="volgende" url viewBox="0 0 24 24"></button>
 			</div>	
 		</section>
 	</main>
 
 	<footer>
-		<img src="images/logo.png" alt="">
+		<img src="images/logo.svg" alt="">
 		<section>
 			<h2>Sprankelend apero bier </h2>
 			<ul>
