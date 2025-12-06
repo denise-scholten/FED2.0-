@@ -215,14 +215,14 @@ De surface plane elementen die ik heb toegevoegd zijn:
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/karakteristiek_screenshots.png" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/karakteristiek_ screenshots.png" width="375px" alt="uitomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 
  Ik heb nog nooit een eigen svg gemaakt met code dus dit was voor mij helemaal nieuw 
  en ik vond dat het mij nog best goed is gelukt. 
 
-  <img src="readme-images/flesje_met_strepen.png" width="375px" alt="top">
+  <img src="readme-images/flesjes_met_ strepen.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
