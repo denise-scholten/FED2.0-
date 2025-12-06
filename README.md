@@ -184,6 +184,7 @@ De surface plane elementen die ik heb toegevoegd zijn:
 - een hover element met kleur en font size in het talen menutje toegevoegd.
 - De flesjes draaien als je er overheen hovert.
 - De carousel werkt zowwel met je mousepad als via de knoppen (dit werkt niet op de oficieele website)
+- als je over de buttons bij de carousellen hovert/ met je mouse op de button gaat staan wordt de button wat groter zodat je als gebruiker kan zien op welke button je aan het klikken bent. 
 
 
 
