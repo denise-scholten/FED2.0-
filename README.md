@@ -196,19 +196,22 @@ het menu wordt geopend.
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/karakteristiek_screenshots.png" width="375px" alt="uitomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+ Ik heb nog nooit een eigen svg gemaakt met code dus dit was voor mij helemaal nieuw 
+ en ik vond dat het mij nog best goed is gelukt. 
 
-  <img src="readme-images/" width="375px" alt="top">
+  <img src="readme-images/flesje_met_strepen.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  het logo van liefmans shuift nog steeds een paar milimeter naar links als het menu open staat. 
+  het heeft waarschijnlijk iets te maken met de tekst die veranderd van menu naar sluiten waardoor de
+  tekst dus langer wordt en dus meer ruimte inbeslag neemt.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  <img src="readme-images/menu.png" width="375px" alt="bummer">
 </details>
 
 
