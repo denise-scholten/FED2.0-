@@ -40,11 +40,11 @@ https://www.liefmans.com/nl-be/?_gl=1*dw3auh*_up*MQ..*_ga*NTQ1NTIwNDM3LjE3NjQ2OD
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   hier de naam van de pagina  
- <img src="readme-images/breakdown_schets.png" width="375px" alt="omschrijving van de pagina">
+ <img src="readme-images/breakdownschets_home-pagina.jpg" width="375px" alt="home pagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   hier de naam van de pagina  
-  <img src="readme-images/breakdown_schets.png" width="375px" alt="omschrijving van de pagina">
+  <img src="readme-images/breakdownschets_2e_pagina.jpg" width="375px" alt="on the rocks pagina">
 </details>
 
 
@@ -67,13 +67,13 @@ https://www.liefmans.com/nl-be/?_gl=1*dw3auh*_up*MQ..*_ga*NTQ1NTIwNDM3LjE3NjQ2OD
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+ <img src="readme-images/breakdownschets_home-pagina.jpg" width="375px" alt="een breakdown schets van de home pagina">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  <img src="readme-images/breakdownschets_2e_pagina.jpg" width="375px" alt="een breakdown schets van de on the rocks pagina">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+
 
 </details>
 
