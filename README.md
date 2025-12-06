@@ -153,7 +153,18 @@ https://www.liefmans.com/nl-be/?_gl=1*dw3auh*_up*MQ..*_ga*NTQ1NTIwNDM3LjE3NjQ2OD
 
   ### Bevindingen
   Ik heb op mijn site een aantal dingen aangepast
+1. Alle buttons en images hebben een duidelije alt tag of aria-label.
+2. De video speelt niet automatisch af.
+3. De video kan op pauze worden gezet.
+4. De site supports dark mode.
+5. De site supports geen high contrast mode.
+6. Alle buttons op de website werken! 
 
+Wat werkt er bij mij ook nog niet helemaal optimaal:
+1. De site support nog geen high contrast mode.
+2. Ik mis ook nog een skiplink (die ondertussen is toegevoegd)
+3. miste toch nog een img zonder alt tag (die heb ik ondertussen een alt="" gegeven omdat die voor de
+   screenreader niet belangrijk is)
 </details>
 
 
@@ -166,6 +177,14 @@ https://www.liefmans.com/nl-be/?_gl=1*dw3auh*_up*MQ..*_ga*NTQ1NTIwNDM3LjE3NjQ2OD
   ### Stand van zaken
 de site is bijna klaar maar ik krijg het nog steeds niet voor elkaar om het logo in de header niet te laten springen als 
 het menu wordt geopend.
+
+De surface plane elementen die ik heb toegevoegd zijn:
+- De kleur van de slection is aangepast passend bij de kleuren op de pagina dus bij de flesjes 0.0 is de selection bauw en bij de peach flesje 
+  oranje ipv rood zoals op de rest van de pagina.
+- een hover element met kleur en font size in het talen menutje toegevoegd.
+- De flesjes draaien als je er overheen hovert.
+- De carousel werkt zowwel met je mousepad als via de knoppen (dit werkt niet op de oficieele website)
+
 
 
   ### Agenda voor meeting
