@@ -1,8 +1,107 @@
-/**************/
-/* CSS REMEDY */
-/**************/
+:root {
+	--color-rood:#D2060D;
+	--color-grijs:#333F48;
+	--color-blauw:#168FC3;
+	--color-oranje: #FFA776;
+	--color-background-body:#FCFCFC;
+	--color-background-tekst:white;
+	--color-text-wit:white;
+	--color-insta-button:#bebebe;
+	--color-border:#E7E7E7;
+	--color-body-gradient:#F4F4F4;
+	--background-image-gradient: linear-gradient(#F4F4F4 0px, rgba(252, 252, 252, 0) 200px);
+}
+
+@media (prefers-color-scheme: dark){
+	:root {
+	--color-rood:#D2060D;
+	--color-grijs:white;
+	--color-blauw:#168FC3;
+	--color-oranje: #FFA776;
+	--color-background-body:black;
+	--color-background-tekst:#333F48;
+	--color-text-wit:white;
+	--color-insta-button:#606060;
+	--background-image-gradient: linear-gradient(#1a1a1a 0px, rgba(26, 26, 26, 0) 200px);
+	.serveren{
+		opacity: 0.8;
+	}
+}
+}
+
+*::selection{
+	background: var(--color-rood);
+	color: var(--color-text-wit);
+}
+
+
 *, *::after, *::before {
-  box-sizing:border-box;  
+  box-sizing:border-box; 
+}
+
+.language-switcher {
+    position: relative; 
+}
+
+.language-switcher button {
+	background: transparent;
+    border: none;
+    color:var(--color-grijs);
+    cursor: pointer;
+    display: block;
+    font-family: brandon-grotesque, sans-serif;
+    font-size: 0.8125rem;
+    font-weight: 900;
+    letter-spacing: 1.42px;
+    padding: 5px 8px;
+    position: relative;
+    text-transform: uppercase;
+    transition: opacity 0.2s ease;
+	z-index: 5;
+}
+
+.language-switcher svg {
+    transition: transform 0.2s ease;
+}
+
+.language-switcher button[aria-expanded="true"] svg {
+    transform: rotate(180deg);
+}
+
+.language-switcher ul {
+    position: absolute;
+    top: 1.5em; 
+    left: 0;
+    background: var(--color-background-tekst);
+    border: 1px solid #ddd;
+    border-radius: 0.3rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    list-style: none;
+    padding: 0.5rem 0;
+    margin: 0;
+    width: 10em;
+    z-index: 4; 
+}
+
+.language-switcher li a {
+  	padding: 0.5rem 1rem;
+	border-bottom: 1px solid rgba(151, 151, 151, 0.22);
+    color: var(--color-grijs);
+    display: block;
+    font-family: brandon-grotesque, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.25px;
+    line-height: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.language-switcher li a:hover {
+    color: var(--color-rood);
+	font-size: 1em;
+	padding-left: 0.4rem;
 }
 
 
@@ -14,10 +113,11 @@ p{
 	font-family: omnes-pro, sans-serif;
     font-size: 1rem;
     line-height: 1.4;
+	color: var(--color-grijs);
 }
 
 h1{
-	color: var(--color-text);
+	color: var(--color-rood);
     font-family: brandon-grotesque, sans-serif;
     font-size: 2rem;
     font-style: normal;
@@ -50,7 +150,7 @@ a{
 }
 
 h3{
-	color: #333F48;
+	color: var(--color-grijs);
     font-family: brandon-grotesque, sans-serif;
     font-size: 0.75rem;
     font-weight: 900;
@@ -70,7 +170,7 @@ li{
 
 body{
 	margin: 0em;
-	background-color: #FCFCFC;
+	background-color: var(--color-background-body);
 }
 
 header{
@@ -78,21 +178,20 @@ header{
 	z-index: 999;
 }
 
-header button{
+.menu-button{
 	background: none;
 	border: none;
-	color: #D2060D;
-	 font-family: brandon-grotesque, sans-serif;
+	color: var(--color-rood);
+	font-family: brandon-grotesque, sans-serif;
     font-size: 0.75rem;
     font-weight: 1000;
     letter-spacing: 1.3px;
     line-height: 1.15;
-    margin: 0 0 0.9rem;
     text-transform: uppercase;
 }
 
 header p{
-	color: #111;
+	color: var(--color-grijs);
 	 font-family: brandon-grotesque, sans-serif;
     font-size: 0.75rem;
     font-weight: 1000;
@@ -106,19 +205,21 @@ header.open {
     position: fixed;
 }
 
-header div{
+.navigatie{
 	position: absolute;
+	top: 0;
 	z-index: 20;
 	display: flex;
 	flex-direction: row;
 	justify-content:space-between;
-	align-items: flex-end;
+	align-items: center;
 	padding: 1em;
 	margin-right: 1em;
 	min-height: 60px;
 	width: 100%;
-	background-color: #FCFCFC;
+	background-color: var(--color-background-body);
 }
+
 
 header img, footer img{
 	height: 3.8em;
@@ -126,7 +227,7 @@ header img, footer img{
 }
 
 nav {
-	background-color: #D2060D;
+	background-color: var(--color-rood);
     position: absolute;
     top: 0;
     left: 0;
@@ -167,12 +268,38 @@ nav a{
     font-size: 1rem;
     font-weight: 900;
     letter-spacing: 1.75px;
-    padding: 7px 0;
+    padding: 0.5em 0;
     position: relative;
     text-decoration: none;
     text-transform: uppercase;
-
 }
+
+nav a {
+    position: relative;
+    display: inline-block;       /* zorgt dat ::after exact de breedte van de tekst heeft */
+    padding-bottom: 0.5em;         /* ruimte voor de svg-lijn */
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: -0.5em;
+    left: 0;
+    height: 6px;                 /* hoogte van je svg */
+    width: 100%;                 /* exact de breedte van de tekst */
+    background-image: url("../images/border_lijn.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    transform: scaleX(0);        /* lijn begint onzichtbaar */
+    transform-origin: left;      /* animatie begint links */
+    transition: transform 0.3s ease;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);        /* lijn groeit van links naar rechts */
+}
+
+
 
 
 /***************/
@@ -182,11 +309,12 @@ nav a{
 .intro{
 	margin:1.5em;
 	margin-top: 0em;
-	background-color: white;
+	background-color: var(--color-background-tekst);
 	box-shadow: 0 5px 20px rgba(75, 75, 75, 0.08);
 }
 
 .intro p{
+	color: var(--color-grijs);
 	padding: 1.2em;
 	margin-top: 0em;
 }
@@ -221,12 +349,12 @@ position: relative;
   transform: translateX(-50%);
   z-index: 2;          
   text-align: center;
-  color: white;
+  color: var(--color-text-wit);
   width: 90%;
 }
 
 .videoContent h1{
-	color: #fff;
+	color: var(--color-text-wit);
     display: block;
     font-family: brandon-grotesque, sans-serif;
     font-size: 2.25rem;
@@ -239,7 +367,7 @@ position: relative;
 }
 
 .videoContent h2{
-	color: #fff;
+	color:var(--color-text-wit);
     display: block;
     font-family: flood-std, sans-serif;
     font-size: 2.25rem;
@@ -255,9 +383,9 @@ position: relative;
 /* buttons */
 
 .intro a, .flesjes a, .aporoBlok a{
-	background-color:#D2060D;
+	background-color:var(--color-rood);
 	text-decoration: none;
-	color: white;
+	color: var(--color-text-wit);
 	padding: 1em;
 	border-radius: 0.5em;
 	width: 11em;
@@ -312,12 +440,25 @@ position: relative;
 
 .alleFlesjes{
 	padding: 0.8em;
-	background-image: linear-gradient(#F4F4F4 0px, rgba(252, 252, 252, 0) 200px);
+	background-image: var(--background-image-gradient);
 }
 
-.fles{
+.fles1, .fles2, .fles3, .fles4{
 	width: 7.5em;
 	height: 27em;
+	transition: transform 0.6s ease;
+}
+
+.fles1, .fles3 {
+    transform: rotate(6deg);
+}
+
+.fles2, .fles4 {
+    transform: rotate(-6deg);
+}
+
+.fles1:hover, .fles2:hover, .fles3:hover, .fles4:hover{
+    transform: rotate(0deg);
 }
 
 .flesjes{
@@ -333,35 +474,47 @@ section.flesjes:nth-of-type(even) img{
 }
 
 .flesje1 h2{
-	color: #D2060D;
+	color: var(--color-rood);
 }
 
 .flesje1 a{
-	background:  #D2060D;
+	background: var(--color-rood);
     box-shadow: 0 7px 20px 0 rgba(97, 0, 3, 0.28);
 }
 
 
 .flesje2 h2{
-	color: #168FC3;
+	color: var(--color-blauw);
 }
 
 .flesje2 a{
-	background-color:#168FC3;
+	background-color:var(--color-blauw);
 	box-shadow: 0 7px 20px 0 rgba(22, 143, 195, 0.13);
 }
 
+.flesje2 ::selection{
+	background: var(--color-blauw);
+	color: var(--color-text-wit);
+}
+
 .flesje3 h2, .flesje4 h2{
-	color:#FFA776;
+	color: var(--color-oranje);
 }
 
 .flesje3 a, .flesje4 a{
-	background: #FFA776; 
+	background: var(--color-oranje); 
 	box-shadow: 0 7px 20px 0 rgba(255, 167, 118, 0.13);
 }
 
+.flesje3 ::selection, .flesje4 ::selection{
+	background: var(--color-oranje);
+	color: var(--color-text-wit);
+}
+
+
+
 .flesjes p{
-	color: #333F48;
+	color: var(--color-grijs);
     font-family: omnes-pro, sans-serif;
     font-size: 0.875rem;
     font-style: normal;
@@ -371,12 +524,9 @@ section.flesjes:nth-of-type(even) img{
     margin-top: 0em;
 }
 
-.flesjes img[alt="flesje-fruitesse"], img[alt="flesje-peach"]{
-	transform: rotate(6deg);
-}
 
-img[alt="flesje-fruitesse0.0"], img[alt="flesje-peach0.0"]{
-	transform: rotate(-6deg);
+.fles1, .fles3 {
+    transform: rotate(6deg);
 }
 
 .OnTheRocks{
@@ -396,7 +546,7 @@ img[alt="flesje-fruitesse0.0"], img[alt="flesje-peach0.0"]{
 .aporoHeading{
 	margin-top: 10em;
 	text-align: center;
-	color: #333F48;
+	color:var(--color-grijs);
 }
 
 .aporo{
@@ -422,13 +572,13 @@ img[alt="flesje-fruitesse0.0"], img[alt="flesje-peach0.0"]{
 	top: -4em;
 	margin: 0em 0.8em 0em 0.8em;
 	padding: 1.2em;
-	background-color: white;
+	background-color: var(--color-background-tekst);
 	box-shadow: 0 5px 20px rgba(75, 75, 75, 0.08);
 	border-radius: 0.2em;
 }
 
 .aporoBlok h2{
-	color: #D2060D;
+	color: var(--color-rood);
 }
 
 /************************/
@@ -436,6 +586,8 @@ img[alt="flesje-fruitesse0.0"], img[alt="flesje-peach0.0"]{
 /************************/
 
 .cocktailCarousel{
+	display: flex;
+	flex-direction: column;
 	padding-left: 1em;
 	position: relative;
 	z-index: 0;
@@ -443,7 +595,7 @@ img[alt="flesje-fruitesse0.0"], img[alt="flesje-peach0.0"]{
 
 .cocktailButtons {
     position: absolute;
-    top: 32%;
+    top: 30%;
     left: 0;
     right: 0;
     display: flex;
@@ -458,7 +610,7 @@ img[alt="flesje-fruitesse0.0"], img[alt="flesje-peach0.0"]{
   	height: 3.5em;
   	border-radius: 50%;
 	border: none;
-	background-color:white;
+	background-color:var(--color-background-tekst);
 	box-shadow: 0 9px 18px 0 rgba(0, 0, 0, 0.16);
 	margin-right: 0.5em;
 }
@@ -486,7 +638,7 @@ img[alt="flesje-fruitesse0.0"], img[alt="flesje-peach0.0"]{
 }
 
 .cocktailCarousel h3{
-	color: #D2060D;
+	color: var(--color-rood);
 	font-family: brandon-grotesque, sans-serif;
     font-size: 1rem;
     font-weight: 900;
@@ -499,7 +651,7 @@ img[alt="flesje-fruitesse0.0"], img[alt="flesje-peach0.0"]{
 }
 
 .cocktailCarousel h2{
-	color: #333E45;
+	color: var(--color-grijs);
     font-family: flood-std, sans-serif;
     font-size: 2.25rem;
     font-weight: 400;
@@ -508,7 +660,7 @@ img[alt="flesje-fruitesse0.0"], img[alt="flesje-peach0.0"]{
 }
 
 .cocktailCarousel li h4{
-	color: white;
+	color: var(--color-text-wit);
 	font-family: brandon-grotesque, sans-serif;
     font-size: 1.4rem;
     font-style: normal;
@@ -519,13 +671,21 @@ img[alt="flesje-fruitesse0.0"], img[alt="flesje-peach0.0"]{
 
     z-index: 3;
 	position: relative;
-	top: -20%;
+	top: -18%;
+	text-align: center;
+}
+
+.cocktailCarousel li p{
+	color:var(--color-text-wit);
+	z-index: 3;
+	position: relative;
+	top: -23%;
 	text-align: center;
 }
 
 .cocktailCarousel p{
 	padding-right: 1em;
-	margin-bottom: 3em;
+	margin-top: 0em;
 }
 	
 .cocktailCarousel ul{
@@ -534,6 +694,7 @@ img[alt="flesje-fruitesse0.0"], img[alt="flesje-peach0.0"]{
 	width: 100%;
 	gap: 1em;
 	padding-left: 0em;
+	padding-right: 1em;
   	overflow-x: scroll;
   	scroll-snap-type: x mandatory;
 	scroll-behavior: smooth;
@@ -563,7 +724,7 @@ img[alt="flesje-fruitesse0.0"], img[alt="flesje-peach0.0"]{
 
 .instagram p{
     border-left: 1px solid #DACCCC;
-    color: #333F48;
+    color: var(--color-grijs);
     font-family: brandon-grotesque, sans-serif;
     font-style: normal;
     font-weight: 900;
@@ -577,6 +738,7 @@ img[alt="flesje-fruitesse0.0"], img[alt="flesje-peach0.0"]{
 
 .instaCarousel ul{
 	padding-left: 1em;
+	padding-right: 1em;
 	display: flex;
 	height: auto;
 	width: 100%;
@@ -602,7 +764,7 @@ img[alt="flesje-fruitesse0.0"], img[alt="flesje-peach0.0"]{
 	margin-right: 0.5em;
 	position: relative;
     border-radius: 50%;
-    background-color: #bebebe;
+    background-color: var(--color-insta-button);
 }
 
 .vorige2::before{
@@ -649,7 +811,7 @@ footer{
 
 footer a{
 	text-decoration: none;
-	color: #D2060D;
+	color: var(--color-rood);
 	border-radius: 0.5em;
     font-family: "brandon-grotesque", sans-serif;
 	font-weight: 700;
@@ -658,10 +820,31 @@ footer a{
     letter-spacing: 1.42px;
     line-height: 2.5;
     text-transform: uppercase;
+	position: relative;
 }
 
+footer a::after {
+    content: "";
+    position: absolute;
+    bottom: -0.5em;
+    left: 0;
+    height: 6px;               
+    width: 100%;               
+    background-image: url("../images/border_lijn_rood.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    transform: scaleX(0);       
+    transform-origin: left;     
+    transition: transform 0.3s ease;
+}
+
+footer a:hover::after {
+    transform: scaleX(1);      
+}
+
+
 footer h2{
-	color: #333F48;
+	color: var(--color-grijs);
     font-family: "brandon-grotesque", sans-serif;
 	font-weight: 700;
 	font-style: normal;
@@ -674,7 +857,7 @@ footer h2{
 
  footer section{
 	border-top: solid;
-	border-color: #E7E7E7;;
+	border-color: var(--color-border);
 	width: 95%;
 	margin-top: 1em;
  }
@@ -686,10 +869,6 @@ footer h2{
 /****************/
 /* tweede pagina*/
 /****************/
-
-/* .onTheRocksDetail{
-	margin-top: 5em;
-} */
 
 .liefmansGlas{
 	width: 9em;
@@ -706,14 +885,52 @@ footer h2{
 	left: 8%;
 }
 
-.blijeMensen{
-	width: 100%;
-	height: auto;
+.onTheRocksDetail {
+    margin: 1em;
+    padding-top: 10em;
+    position: relative;
+    z-index: 10;
+}
+
+.glasEnFlesje::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    left: -1em; 
+    background-image: url('../images/strepen.svg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+    z-index: -1;
+}
+
+.imgStrepen {
+    position: relative;
+	margin-left: -0.5em;
+}
+
+.imgStrepen::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+	left: -1em;
+    background-image: url('../images/strepen2.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 2; 
+}
+ /* voor het verbeteren van de code van de before  */
+
+
+.blijeMensen {
+    width: 100%;
+    height: auto;
+	padding-right: 0.5em;
 }
 
 .onTheRocksDetail{
-	margin: 1em;
-	padding-top: 10em;
+	margin-top: 0;
 }
 
 .onTheRocksDetail div{
@@ -721,6 +938,7 @@ footer h2{
 	flex-direction: row;
 	align-items: flex-end;
 	position: relative;
+	margin-right: -1em;
 }
 
 .onTheRocksDetail h1{
@@ -729,23 +947,42 @@ footer h2{
 
 .onTheRocksDetail p::before{
 	background-image: url("../images/border_lijn.svg");
-
 }
 
 .serveren{
 	padding-left: 0em;
+	opacity: 0.5;
 }
+
 .serveren img{
 	width: 100%;
 	height: auto;
 	padding-left: 1em;
-	padding-right: 1em; 
+	padding-right: 1em;
+	clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+    margin-top: -10%;
 }
-.inschenken{
-	margin: 1em;
+
+.OnTheRocksButtons {
+    position: absolute;
+    top: 28%;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center; 
+    padding: 0 2rem;
+    transform: translateY(-50%); 
+	z-index: 100;
 }
+
+.inschenken {
+    margin: 1em;
+    position: relative;
+    z-index: 1;
+}
+
 .inschenken h2{
-	color: #333E45;
+	color: var(--color-grijs);
     font-family: flood-std, sans-serif;
     font-size: 2.25rem;
     font-weight: 400;
@@ -754,24 +991,27 @@ footer h2{
 }
 
 .inschenken h3{
-	color: #D2060D;
-	
+	color: var(--color-rood);
+    font-family: brandon-grotesque, sans-serif;
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 1.3;
+    margin: 0 0 5px;
+    text-transform: uppercase;
+	order: -1;
 }
 
-
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
-:root {
-	/* startje */
-	--color-text:#D2060D;
-	--color-background:#eee;
+.inschenken p{  
+	color: var(--color-grijs);
+    font-family: omnes-pro, sans-serif;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem;
+    margin: 0;
 }
 
-
-/****************/
-/* JOUW STYLING */
-/****************/
-
-/* jouw code */
-
+.footer2{
+	margin-top: 1em;
+}
