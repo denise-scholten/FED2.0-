@@ -16,13 +16,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Auteur:
-  Sanne 't Hooft (vervangen door jouw naam)
+Denise Scholten
 
   #### Je startniveau:
-  hier je startniveau (kies uit zwart, rood óf blauw)
+rood
 
   #### Je focus:
-  hier je focus (kies uit responsive óf surface plane)
+surface plane
  
 </details>
 
@@ -36,16 +36,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
+https://www.liefmans.com/nl-be/?_gl=1*dw3auh*_up*MQ..*_ga*NTQ1NTIwNDM3LjE3NjQ2ODQ4MDg.*_ga_GNXH6M7BQP*czE3NjQ5NzY3NjckbzMkZzEkdDE3NjQ5NzcxNzAkajYwJGwwJGgw*_ga_ZQVFDW88KX*czE3NjQ5NzY3NjckbzUyJGcxJHQxNzY0OTc3MTcwJGo2MCRsMCRoMA..)
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+ <img src="readme-images/breakdown_schets.png" width="375px" alt="omschrijving van de pagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
- 
+  <img src="readme-images/breakdown_schets.png" width="375px" alt="omschrijving van de pagina">
 </details>
 
 
